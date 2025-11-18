@@ -24,7 +24,7 @@ with st.form("expense_form"):
             'Description':[description]
         })
 
-        st.session_state.expenses = pd.concat({st.session_state.expenses, new_expense}, ignore_index=True)
+        st.session_state.expenses = pd.concat([st.session_state.expenses, new_expense], ignore_index=True)
         st.success("Expense added!")
 
     if not st.session_state.expenses.empty:
@@ -38,7 +38,7 @@ with st.form("expense_form"):
         category_totals = st.session_state.expenses.groupby("Category")["Amount"].sum()
 
         fig, ax = plt.subplots(figsize = (10,6))
-        ax.pie(category_totals.values,label=category_totals.index, autopct='%1.1f%%' )
+        ax.pie(category_totals.values,labels=category_totals.index, autopct='%1.1f%%' )
         ax.set_title("Expenses by Category")
         st.pyplot(fig)
     else:
