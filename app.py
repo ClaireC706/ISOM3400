@@ -38,14 +38,20 @@ with tab2:
         # "-" indicates bullet points
    
 with tab3:
-    st.write("Content for Market Trends")
-    market_trends = {
-        "Eco-friendly products": "Increasing demand",
-        "Online shopping": "Continued growth",
-        "Subscription services": "Rising popularity"
-    }
-    for trend, status in market_trends.items():
-        st.write(f"{trend}: {status}")
+    col1, col2 = st.columns(2)
+    with col1: 
+        st.header("Q1 2024")
+        st.write("Revenue: $1.2M")
+    with col2: 
+        st.header("Q2 2024")
+        st.write("Revenue: $1.5M")
+with st.expander ("More Information"):
+    st.write("Additional details on data collection methods.")
+    st.write("#Data was collected through surveys and sales reports.")
+    
+
+        
+    
 
 with st.expander("More Information"):
     st.write("Additional details on data collection methods.")
