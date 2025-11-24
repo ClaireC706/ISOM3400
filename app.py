@@ -12,7 +12,10 @@ st.write("### Sample Data")
 st.write(df)
 
 # Step 3: Create a Slider for Selecting a Sales Range
-sales_range = st.slider("Select Sales Range", min_value=0, max_value=1500, value=(500, 1000))
+sales_range = st.slider("Select Sales Range",
+                        min_value=0,
+                        max_value=1500, 
+                        value=(500, 1000))
 
 # Step 4: Filter Products Based on Selected Sales Range
 filtered_df = df[(df['Sales'] >= sales_range[0]) & (df['Sales'] <= sales_range[1])]
