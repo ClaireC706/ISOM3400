@@ -1,5 +1,18 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import os
+
+# Get teh current working directory
+current_directory = os.getcwd()
+# Define the file path
+file_path = os.path.join(current_directory,'winequality-red.csv')
+
+# Red the CSV file into a dataframe 
+df = pd.read_csv(file_path, delimiter = ';')
+
+# Display the DataFrame in an interactive table
+st.write("Wine Quality Data")
+st.dataframe(df)
 
 st.title('Hello, Students!')
 st.write('This is your Python Programming course.')
