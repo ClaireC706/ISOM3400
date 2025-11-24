@@ -11,7 +11,7 @@ with st.sidebar:
         icons = ["house",
                  "cloud-upload",
                  "list-task"],
-        menu_icon= "emoji-smile-fill",
+        menu_icon= "cast",
         default_index=0,
     )
 
