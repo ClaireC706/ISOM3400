@@ -15,6 +15,9 @@ df = pd.read_csv(file_path, delimiter = ';')
 st.write("Wine Quality Data")
 st.dataframe(df)
 
+
+
+
 st.title('Hello, Students!')
 st.write('This is your Python Programming course.')
 
